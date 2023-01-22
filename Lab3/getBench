@@ -1,0 +1,3 @@
+#! /bin/sh
+
+curl ftp.iitdh.ac.in/opensource/tools/byte-unixbench-mod.zip -o byte-unixbench-mod.zip
