@@ -1,0 +1,15 @@
+Jan 23 03:58:35 10 kernel: 200010021 Minix: PID 247 swapped in
+Jan 23 03:58:35 10 kernel: 200010021 Minix: PID 248 swapped in
+Jan 23 03:58:35 10 kernel: 200010021 Minix: PID 249 swapped in
+Jan 23 03:58:35 10 kernel: 200010021 Minix: PID 250 swapped in
+Jan 23 03:58:35 10 kernel: 200010021 Minix: PID 251 swapped in
+Jan 23 03:58:35 10 kernel: 200010021 Minix: PID 252 swapped in
+Jan 23 03:58:35 10 kernel: 200010021 Minix: PID 253 swapped in
+Jan 23 03:58:37 10 kernel: 200010021 Minix: PID 253 swapped in
+Jan 23 03:58:38 10 kernel: 200010021 Minix: PID 9 swapped in
+Jan 23 03:58:40 10 kernel: 200010021 Minix: PID 9 swapped in
+Jan 23 03:58:40 10 kernel: 200010021 Minix: PID 253 swapped in
+Jan 23 03:58:44 10 kernel: 200010021 Minix: PID 23 swapped in
+Jan 23 03:58:45 10 kernel: 200010021 Minix: PID 23 swapped in
+Jan 23 03:58:49 10 kernel: 200010021 Minix: PID 252 swapped in
+Jan 23 03:58:49 10 kernel: 200010021 Minix: PID 254 swapped in
