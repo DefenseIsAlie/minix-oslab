@@ -1,5 +1,5 @@
 #! /bin/sh
 
-./spawn.sh &
-./syscall.sh &
+./arithoh.sh &
+./fstime.sh &
 wait

@@ -1,5 +1,5 @@
 #! /bin/sh
 
-./fstime.sh &
-./pipe.sh &
+./arithoh.sh &
+./syscall.sh &
 wait
