@@ -1,6 +1,3 @@
-#ifndef INCLUDE_PCB
-#define INCLUDE_PCB
-
 #include <fstream>
 #include <vector>
 #include <sstream>
@@ -20,8 +17,25 @@ public:
     int TotalBurst;
     int TotalIoTime;
 
+    /*
+        DS for RR
+    */
+
+   std::vector<int> timeComplete;
+   int IoStart = 0;
+
 
 processBlock(std::string processdat);
+
+void operator = (const processBlock& rhs){
+    arrivalTime = rhs.arrivalTime;
+    burstIo = rhs.burstIo;
+    TotalBurst = rhs.TotalBurst;
+    TotalIoTime = rhs.TotalIoTime;
+    timeComplete = rhs.timeComplete;
+    IoStart = rhs.IoStart;
+}
+
 
 };
 
@@ -59,6 +73,8 @@ processBlock:: processBlock(std::string processdat){
         
         int burstdata;
         dat >> burstdata;
+
+        int burstcopy = burstdata;
         
         if (burstdata == -1){
             break;
@@ -68,11 +84,10 @@ processBlock:: processBlock(std::string processdat){
         if(isBurst%2 != 0){ this->TotalIoTime += burstdata; }       
 
         this->burstIo.push_back(burstdata);
+        this->timeComplete.push_back(burstdata);
         
 
         isBurst+=1;
     }
 
 }
-
-#endif
