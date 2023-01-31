@@ -26,16 +26,20 @@ int main(int argc, char **argv){
     }
     processQ2 = processQ;
 
+    #if SJF
     SJF sjf(processQ);
 
     sjf.simulate();
+    #endif
 
-    // std::cout << "Started rr" << "\n";
+    #if RR
+    std::cout << "Started rr" << "\n";
 
-    // RR rr(processQ);
-    // rr.simulate();
+    RR rr(processQ);
+    rr.simulate();
 
-    // std::cout << "Finished rr" << "\n";
+    std::cout << "Finished rr" << "\n";
+    #endif
     // std::vector<processBlock> processQ3;
     // processQ3.push_back(processQ2[0]);
 

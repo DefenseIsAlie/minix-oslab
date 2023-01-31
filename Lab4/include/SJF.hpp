@@ -110,7 +110,7 @@ void SJF::printStatistics(){
     for (processBlock& job : this->doneJobs){
         job.turnAroundtime = job.job_done_time - job.arrivalTime;
         job.responsetime = job.first_execution - job.arrivalTime;
-        job.penaltyratio =  job.TotalBurst / job.turnAroundtime;
+        job.penaltyratio =  (double)job.TotalBurst / (double)job.turnAroundtime;
         job.waitingtime = job.job_done_time - job.TotalBurst - job.arrivalTime;
     }
 
