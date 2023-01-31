@@ -14,26 +14,28 @@ int main(int argc, char **argv){
         input = parseDat(argv[1]);
     }
 
+    int pid = 1;
     std::vector<processBlock> processQ;
     std::vector<processBlock> processQ2;
     for (std::string line : input){
         
         processBlock blk(line);
+        blk.pid = pid;
         processQ.push_back(blk);
-        
+        pid+=1;
     }
     processQ2 = processQ;
 
-    // SJF sjf(processQ);
+    SJF sjf(processQ);
 
-    // sjf.simulate();
+    sjf.simulate();
 
-    std::cout << "Started rr" << "\n";
+    // std::cout << "Started rr" << "\n";
 
-    RR rr(processQ);
-    rr.simulate();
+    // RR rr(processQ);
+    // rr.simulate();
 
-    std::cout << "Finished rr" << "\n";
+    // std::cout << "Finished rr" << "\n";
     // std::vector<processBlock> processQ3;
     // processQ3.push_back(processQ2[0]);
 

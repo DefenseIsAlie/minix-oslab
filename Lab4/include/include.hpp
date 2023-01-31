@@ -9,7 +9,7 @@ class processBlock{
 public:
     int arrivalTime;
     std::vector<int> burstIo;
-
+    int pid;
     /*
      * DS for SJF 
     */
@@ -22,18 +22,41 @@ public:
     */
 
    std::vector<int> timeComplete;
-   int IoStart = 0;
+   int CurrIoTime = 0;
+   int Iostart=0;
+
+    // Statistics
+    bool first_executed = false;
+    int first_execution = 0; // execution start time
+    int job_done_time = 0;
+
+    int turnAroundtime = 0;
+    int responsetime = 0;
+    double penaltyratio = 0;
+    int waitingtime = 0;
+    std::vector<std::pair<int,int>> scheduleTimes;
 
 
 processBlock(std::string processdat);
 
 void operator = (const processBlock& rhs){
+    pid = rhs.pid;
     arrivalTime = rhs.arrivalTime;
     burstIo = rhs.burstIo;
     TotalBurst = rhs.TotalBurst;
     TotalIoTime = rhs.TotalIoTime;
     timeComplete = rhs.timeComplete;
-    IoStart = rhs.IoStart;
+    CurrIoTime = rhs.CurrIoTime;
+    Iostart = rhs.Iostart;
+    job_done_time = rhs.job_done_time;
+
+    first_executed = rhs.first_executed;
+    first_execution = rhs.first_execution;
+    turnAroundtime = rhs.turnAroundtime;
+    responsetime = rhs.responsetime;
+    penaltyratio = rhs.penaltyratio;
+    waitingtime = rhs.waitingtime;
+    scheduleTimes = rhs.scheduleTimes;
 }
 
 
