@@ -27,11 +27,11 @@ int main(int argc, char **argv){
     processQ2 = processQ;
 
 
- std::cout << "Started sjf" << "\n";    
+    std::cout << "Started sjf" << "\n";    
     SJF sjf(processQ);
 
     sjf.simulate();
-        std::cout << "Finished sjf" << "\n";
+    std::cout << "Finished sjf" << "\n";
 
     
     std::cout << "Started rr" << "\n";
