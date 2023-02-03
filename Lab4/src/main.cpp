@@ -26,21 +26,22 @@ int main(int argc, char **argv){
     }
     processQ2 = processQ;
 
-
+#if shortest
     std::cout << "Started sjf" << "\n";    
     SJF sjf(processQ);
 
     sjf.simulate();
     std::cout << "Finished sjf" << "\n";
-
+#endif
     
     std::cout << "Started rr" << "\n";
 
+#if roundrobin
     RR rr(processQ2);
     rr.simulate();
 
     std::cout << "Finished rr" << "\n";
-    
+#endif   
     // std::vector<processBlock> processQ3;
     // processQ3.push_back(processQ2[0]);
 
